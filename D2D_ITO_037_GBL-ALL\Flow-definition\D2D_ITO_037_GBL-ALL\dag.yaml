@@ -1,0 +1,32 @@
+connections:
+  destinations:
+  - application_name: a2a_c2
+    type: webmethods
+  - application_name: oebs_gbl_archive
+    type: sftp
+  sources:
+  - application_name: oebs_gbl_src
+    type: sftp
+error_handling:
+  email:
+  - myupty7@Amway.com
+  - sheik.jailani@Amway.com
+  - srikanth.prathipati@amway.com
+  - riya.manish@amway.com
+  - mahendra.ulchapogu@amway.com
+  - ragapriya.madireddy@amway.com
+  email_on_failure: true
+  retries: 3
+flow_metadata:
+  catchup: false
+  description: SFTP Interface to transfer Inventory Balances file from EBS to JDE
+  max_active_runs: 1
+  owner: OEBS
+  start_date: timezone.parse('2023-10-13 00:00')
+  tags:
+  - oebs
+  - a2a_migration
+  - chronos_migration
+  use_sources: false
+inumber: D2D_ITO_037_GBL-ALL
+role: oebs
