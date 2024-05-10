@@ -1,0 +1,18 @@
+Variables:
+  a2a_c2:
+    connection: wm_oebs_a2a_c2_http
+    regex: null
+    rename_mask: null
+    replacement: null
+    request_url: /invoke/ABGFFGateway.Inbound.Affiliate.http:receiveFiles
+  oebs_gbl_archive:
+    connection: oebs_gbl_sftp
+    path: /g01/appltemp/esbqae01/xxcmndir/archive/d2d007/
+    regex: null
+    rename_mask: null
+    replacement: null
+  oebs_gbl_src:
+    connection: oebs_gbl_sftp
+    delete_sources: false
+    file_filter: ^((?!80425).)*$
+    path: /g01/appltemp/esbqae01/xxcmndir/outbound/d2d007/
